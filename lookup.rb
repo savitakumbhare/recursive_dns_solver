@@ -26,9 +26,7 @@ def parse_dns(dns_raw)
     dns = dns.split(",").join(" ")
     #dns = dns.split(" ")
     if dns.split.first == "A" || dns.split.first == "CNAME"
-      dns_records[dns.split[1]] = { type: dns.split[0], target: dns.split[2] }
-      #  dns_records[dns.[1]] = { type: dns[0], target: dns[2] }
-      #records.push(dns)
+      dns_records[dns.split[1]] = { type: dns.split[0], target: dns.split[2] 
     end
   end
   return dns_records
@@ -55,5 +53,3 @@ if (dns_records.has_key?(domain))
 else
   puts "Error: record not found for #{domain}"
 end
-#lookup_chain = resolve(dns_records, lookup_chain, domain)
-#puts lookup_chain.join(" => ")
